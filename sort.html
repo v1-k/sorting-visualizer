@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sorting Visualizer</title>
+<link rel="stylesheet" type="text/css" href="sort.css">
+</head>
+<body onload="showVal(50)" id="gradient">
+    <h1>Sorting Visualizer</h1>
+    <label for="sortvalues">Array (between 5 and 100):</label>
+    <input type="range" id="sortvalues" name="sortvalues" min="5" max="100" oninput="showVal(this.value)" onchange="showVal(this.value)">
+    <label for="sortselection">Select</label>
+    <select name="sortselection" id="sortselection" >
+      <option value="bubble">Bubble</option>
+      <option value="insertion">Insertion</option>
+      <!-- <option value="merge">Merge</option>
+      <option value="quick">Quick</option> -->
+      <option value="selection">Selection</option>
+    </select>   
+    <button id="sorter" type="button" onclick="handleSort()">Sort</button> 
+    <div id="sort-elem-container">
+    </div>
+    <script type="text/javascript" src="sort.js"></script>
+</body>
+</html>
